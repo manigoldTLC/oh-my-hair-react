@@ -1,6 +1,8 @@
+import { Header } from "./components/Header/style";
+
 function App() {
   return (
-    <div>ola mundo</div>
+    <Header />
   );
 }
 
