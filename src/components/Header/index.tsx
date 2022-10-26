@@ -1,27 +1,27 @@
-import { Header } from "./style";
+import { Header, BotaoInscricao, BotaoInscricaoDesktop } from "./style";
+import { IoIosArrowDown } from "react-icons/io";
 
 const HeaderComponent = () => {
+  const logo = require("../../assets/header/logo.png");
+  const menu = require('../../assets/menu/Vector1.svg');
+
   return (
     <Header>
-      <button className="header__menu">
-        <img src="assets/vetores/Vector4.svg" alt="menu icone" />
+      <button className="menu">
+        <img src={menu} alt="menu icone" />
       </button>
 
-      <figure className="header__logo">
-        <img src="assets/logo OMH! 3.svg" alt="logo oh my hair" />
+      <figure className="logo">
+        <img src={logo} alt="logo oh my hair" />
       </figure>
 
-      <button className="header__inscricao">Inscreva-se</button>
+      <BotaoInscricao>Inscreva-se</BotaoInscricao>
 
-      <ul className="header__lista">
+      <ul className="lista">
         <li className="item">
           <a className="item__wrapper">
             <span>Tendências</span>
-            <img
-              className="item__mais"
-              src="assets/vetores/menu/Vector2.svg"
-              alt="mais"
-            />
+            <IoIosArrowDown className="mais" color="#D76B50" size={20} />
           </a>
 
           <div className="item__submenu">
@@ -35,50 +35,28 @@ const HeaderComponent = () => {
         </li>
         <li className="item">
           <span>Meu cabelo</span>
-          <img
-            className="item__mais"
-            src="assets/vetores/menu/Vector2.svg"
-            alt="mais"
-          />
+          <IoIosArrowDown className="mais" color="#D76B50" size={20} />
         </li>
         <li className="item">
           <span>Cortes</span>
-          <img
-            className="item__mais"
-            src="assets/vetores/menu/Vector2.svg"
-            alt="mais"
-          />
+          <IoIosArrowDown className="mais" color="#D76B50" size={20} />
         </li>
         <li className="item">
           <span>Coloridos</span>
-          <img
-            className="item__mais"
-            src="assets/vetores/menu/Vector2.svg"
-            alt="mais"
-          />
+          <IoIosArrowDown className="mais" color="#D76B50" size={20} />
         </li>
 
         <li className="item">
           <span>Penteados</span>
-          <img
-            className="item__mais"
-            src="assets/vetores/menu/Vector2.svg"
-            alt="mais"
-          />
+          <IoIosArrowDown className="mais" color="#D76B50" size={20} />
         </li>
 
         <li className="item">
           <span>Dicas</span>
-          <img
-            className="item__mais"
-            src="assets/vetores/menu/Vector2.svg"
-            alt="mais"
-          />
+          <IoIosArrowDown className="mais" color="#D76B50" size={20} />
         </li>
 
-        <button className="header__inscricao header__inscricao--desktop">
-          Inscreva-se
-        </button>
+        <BotaoInscricaoDesktop>Inscreva-se</BotaoInscricaoDesktop>
       </ul>
     </Header>
   );
